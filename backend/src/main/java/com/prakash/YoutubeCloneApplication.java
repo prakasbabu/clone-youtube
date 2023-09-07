@@ -17,5 +17,3 @@ public class YoutubeCloneApplication {
         return new AmazonS3Client();
     }
 }
-//-Dcloud.aws.credentials.access-key =
-//Dcloud.aws.credentials.secret-key =
