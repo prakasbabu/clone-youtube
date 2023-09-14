@@ -6,13 +6,13 @@ import {HttpClient} from "@angular/common/http";
 })
 export class VideoService {
 
-  constructor(httpClient:HttpClient) { }
+  constructor(private httpClient:HttpClient) { }
 
-  uploadVideo(fileEntry: FileSystemFileEntry){
+  uploadVideo(fileEntry: File){
 
     const formData = new FormData()
-    formData.append('logo', file, relativePath)
-    this.httpClient.post("http://localhost:9090/api/videos/upload")
-    return;
+    formData.append('file', fileEntry, fileEntry.name);
+    return this.httpClient.post("http://localhost:9090/api/videos/upload", formData);
+
   }
 }

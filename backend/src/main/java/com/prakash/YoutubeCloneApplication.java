@@ -12,8 +12,5 @@ public class YoutubeCloneApplication {
         SpringApplication.run(YoutubeCloneApplication.class, args);
     }
 
-    @Bean
-    public AmazonS3Client getAmazonS3ClinetBean() {
-        return new AmazonS3Client();
-    }
+
 }

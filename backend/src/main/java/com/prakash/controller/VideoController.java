@@ -17,7 +17,6 @@ public class VideoController {
     @PostMapping(path = "/upload", consumes = {MULTIPART_FORM_DATA_VALUE})
     @ResponseStatus(HttpStatus.CREATED)
     public void uploadVideo(@RequestParam("file") MultipartFile file){
-        System.out.println("in the controller");
-        videoService.uploadVideo(file);
+      videoService.uploadVideo(file);
     }
 }

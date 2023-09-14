@@ -12,8 +12,7 @@ public class VideoService {
     private final S3Service s3service;
     private final VideoRepository videoRepository;
     public void uploadVideo( MultipartFile file){
-        System.out.println("service called");
-        String videoUrl = s3service.uploadFile(file);
+       String videoUrl = s3service.uploadFile(file);
         Video video = new Video();
         video.setVideoUrl(videoUrl);
         videoRepository.save(video);
